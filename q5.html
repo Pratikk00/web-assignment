@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/jquary/jquery-3.5.1.js"></script>
+</head>
+<body>
+    
+    <input type="text" placeholder="enter name"><br>
+    <input type="email" placeholder="enter email"><br>
+
+    <input id="app" type="number" placeholder="enter contect no"> <span><a id="add" href="#">add anothor contect no</a></span><br>
+
+    <div class="d"></div>
+    <textarea placeholder="enter addres" name="" id="" cols="20" rows="4"></textarea><br>
+    <span>male</span> <input name="a" type="radio">
+    <span>female</span> <input name="a"  type="radio"><br>  
+
+    <input type="button" value="submit">
+
+    <script>
+           $(document).ready(function() {
+                $('#add').click(function() {
+                   // let num = prompt('enter a new mobile no:');
+                  
+                 let addnum = $('div').append('<input type="text" placeholder="new contect">');
+                   
+                  
+                });
+           });
+    </script>
+</body>
+</html>

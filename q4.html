@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" placeholder="enter name"><br>
+    <input type="email" placeholder="enter email"><br>
+    <input type="number" placeholder="enter contect no"><br>
+    <textarea name="" id="" cols="20" rows="5"></textarea><br>
+     <span>male</span><input name="a" type="radio">
+     <span>femal</span><input name="a" type="radio"><br>
+     <span>language</span> 
+     <select name="" id="lang">
+      <option value="">english</option>
+      <option value="">english</option>
+      <option value="">english</option>
+      <option value="">english</option>
+     </select>
+
+     <span><a href="#" id="add">add language</a></span>
+
+     <script>
+        document.getElementById("add").addEventListener('click', function() {
+
+            let newlang = prompt('enter a new language');   
+           let langselect = document.getElementById('lang');
+            let newop = document.createElement('option');   
+
+            newop.text= newlang;
+            langselect.add(newop);  
+        })
+
+        
+     </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Student Information</h2>
+
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Favourite Colors</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table content will be added dynamically using JavaScript -->
+        </tbody>
+    </table>
+
+    <script>
+        // Given JSON object
+        var student = [
+            {
+                "id": 1,
+                "name": "name1",
+                "color": ["red", "green"]
+            },
+            {
+                "id": 2,
+                "name": "name2",
+                "color": ["pink", "yellow"]
+            }
+        ];
+
+        // Function to generate HTML table
+        function generateTable() {
+            var tableBody = document.getElementById("studentTable").getElementsByTagName('tbody')[0];
+
+            for (var i = 0; i < student.length; i++) {
+                var row = tableBody.insertRow(i);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+
+                cell1.innerHTML = student[i].id;
+                cell2.innerHTML = student[i].name;
+                cell3.innerHTML = student[i].color.join(', ');
+            }
+        }
+
+        // Call the function to generate the table
+        generateTable();
+    </script>
+
+</body>
+</html>

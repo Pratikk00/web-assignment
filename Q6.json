@@ -1,0 +1,45 @@
+{
+    "employees": [
+      {
+        "empCode": "E001",
+        "fullName": "John Doe",
+        "salary": 60000,
+        "designation": "Software Engineer",
+        "birthdate": "1990-05-15",
+        "languagesKnown": ["English", "Java", "JavaScript"]
+      },
+      {
+        "empCode": "E002",
+        "fullName": "Jane Smith",
+        "salary": 75000,
+        "designation": "Senior Software Engineer",
+        "birthdate": "1985-12-10",
+        "languagesKnown": ["English", "Python", "SQL"]
+      },
+      {
+        "empCode": "E003",
+        "fullName": "Alice Johnson",
+        "salary": 90000,
+        "designation": "Tech Lead",
+        "birthdate": "1980-08-25",
+        "languagesKnown": ["English", "C#", "JavaScript"]
+      },
+      {
+        "empCode": "E004",
+        "fullName": "Bob Williams",
+        "salary": 80000,
+        "designation": "Data Scientist",
+        "birthdate": "1988-04-02",
+        "languagesKnown": ["English", "R", "Python"]
+      },
+      {
+        "empCode": "E005",
+        "fullName": "Eva Brown",
+        "salary": 70000,
+        "designation": "UI/UX Designer",
+        "birthdate": "1992-11-18",
+        "languagesKnown": ["English", "HTML", "CSS"]
+      }
+    ]
+  }
+  

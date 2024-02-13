@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Information</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Product Information</h2>
+
+    <label for="productId">Product ID:</label>
+    <input type="text" id="productId">
+
+    <label for="productName">Product Name:</label>
+    <input type="text" id="productName">
+
+    <button onclick="addProduct()">ADD</button>
+
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table content will be added dynamically using JavaScript -->
+        </tbody>
+    </table>
+
+    <script>
+        // Function to add a new row to the table
+        function addProduct() {
+            var productId = document.getElementById("productId").value;
+            var productName = document.getElementById("productName").value;
+
+            if (productId && productName) {
+                var tableBody = document.getElementById("productTable").getElementsByTagName('tbody')[0];
+
+                var row = tableBody.insertRow(tableBody.rows.length);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+
+                cell1.innerHTML = productId;
+                cell2.innerHTML = productName;
+
+                // Clear input fields after adding a row
+                document.getElementById("productId").value = "";
+                document.getElementById("productName").value = "";
+            } else {
+                alert("Please enter both Product ID and Product Name.");
+            }
+        }
+    </script>
+
+</body>
+</html>
