@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            animation: blink 1s infinite;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input:hover, textarea:hover {
+            background-color: #e6f7ff; /* Change this color as per your preference */
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ccc; /* Disabled button color */
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: not-allowed;
+        }
+
+        input[type="checkbox"]:checked + button {
+            background-color: #4caf50; /* Enabled button color when checkbox is checked */
+            cursor: pointer;
+        }
+
+        @keyframes blink {
+            0%, 49%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+    <title>Registration Form</title>
+</head>
+<body>
+    <form>
+        <h2>Registration Form</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" onfocus="this.style.backgroundColor='#e6f7ff'" onblur="this.style.backgroundColor=''">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" onfocus="this.style.backgroundColor='#e6f7ff'" onblur="this.style.backgroundColor=''">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" onfocus="this.style.backgroundColor='#e6f7ff'" onblur="this.style.backgroundColor=''">
+
+        <input type="checkbox" id="agree" onclick="enableButton()">
+        <label for="agree">I Agree to Terms and Conditions</label>
+
+        <button id="registerButton" disabled>Register</button>
+    </form>
+
+    <script>
+        function enableButton() {
+            var checkbox = document.getElementById("agree");
+            var button = document.getElementById("registerButton");
+
+            button.disabled = !checkbox.checked;
+        }
+    </script>
+</body>
+</html>
